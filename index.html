@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>علي محمود | ملحن وموزع موسيقي ومهندس صوت</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #0b0c10;
+            --bg-card: #151821;
+            --gold: #d4af37;
+            --gold-hover: #f3ce5e;
+            --text-main: #ffffff;
+            --text-muted: #a0a6b5;
+            --border-color: rgba(212, 175, 55, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Header / Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 12, 16, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.12) 0%, rgba(11, 12, 16, 1) 70%);
+        }
+
+        .badge {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            background: linear-gradient(to left, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+        }
+
+        .social-hero {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold {
+            background-color: var(--gold);
+            color: #0b0c10;
+        }
+
+        .btn-gold:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h3 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* About Section */
+        .about-box {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 1.15rem;
+            color: #e2e6f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        /* Collaborations Grid */
+        .artists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 15px;
+        }
+
+        .artist-card {
+            background: var(--bg-card);
+            padding: 18px 15px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .artist-card i {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        .artist-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            background: #1c202c;
+        }
+
+        /* Works Grid */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .work-card {
+            background: var(--bg-card);
+            padding: 22px;
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+        }
+
+        .work-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .music-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .work-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .work-sub {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .play-arrow {
+            color: var(--text-muted);
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .work-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.12);
+        }
+
+        .work-card:hover .play-arrow {
+            color: var(--gold);
+            transform: translateX(-4px);
+        }
+
+        /* Contact & Footer */
+        .contact-section {
+            text-align: center;
+            background: linear-gradient(180deg, rgba(21,24,33,0) 0%, rgba(21,24,33,1) 100%);
+            border-radius: 20px;
+            padding: 60px 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.3rem; }
+            header h2 { font-size: 1.1rem; }
+            .nav-links { display: none; }
+            .about-box { padding: 25px; font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#" class="logo">علي محمود | Ali Mahmood</a>
+        <ul class="nav-links">
+            <li><a href="#about">نبذة عني</a></li>
+            <li><a href="#collaborations">التعاونات الفنية</a></li>
+            <li><a href="#works">الأعمال الموسيقية</a></li>
+            <li><a href="#contact">تواصل معي</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="badge"><i class="fa-solid fa-music"></i> منذ عام 2016 • سوريا</div>
+        <h1>علي محمود</h1>
+        <h2>ملحن وموزع موسيقي ومهندس صوت</h2>
+        <div class="social-hero">
+            <a href="https://youtube.com/@alimahmood.?si=vJq6zbE7PpBryXlS" target="_blank" class="btn btn-gold">
+                <i class="fa-brands fa-youtube"></i> القناة الرسمية
+            </a>
+            <a href="https://www.instagram.com/alimahmood.music__?mdxt=MXY1b2hsamh5YXk3aA==" target="_blank" class="btn btn-outline">
+                <i class="fa-brands fa-instagram"></i> إنستغرام
+            </a>
+            <a href="#contact" class="btn btn-outline">
+                <i class="fa-solid fa-paper-plane"></i> للتواصل والأعمال
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-title">
+            <h3>نبذة عني</h3>
+            <p>مسيرة فنية تجمع بين الإحساس الموسيقي والاحترافية الصوتية</p>
+        </div>
+        <div class="about-box">
+            ملحن وموزع موسيقي ومهندس صوت سوري، انطلقت مسيرته الفنية الاحترافية في عام 2016. على مدار سنوات من العمل الموسيقي، قدّم رؤية فنية تجمع بين الأصالة والحداثة في التوزيع والهندسة الصوتية، مما أثمر عن تعاونات ناجحة مع نخبة من نجوم الغناء في سوريا والوطن العربي، وتحقيق انتشار واسع لأعماله عبر مختلف المنصات الموسيقية.
+        </div>
+    </section>
+
+    <!-- Collaborations Section -->
+    <section id="collaborations">
+        <div class="section-title">
+            <h3>أبرز التعاونات الفنية</h3>
+            <p>تشرفت بالعمل والتعاون مع نخبة من الفنانين والنجوم</p>
+        </div>
+        <div class="artists-grid">
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> ربيع الأسمر</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> محمد السالم</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> ياسر عبد الوهاب</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> زيد الحبيب</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> صبحي محمد</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> بهاء اليوسف</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> أمير عموري</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> عباس الأمير</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> علي العيساوي</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> مجيد الرمح</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> ميادة العلي</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> شادي رنجوس</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> زكريا رضوان</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> ربيع سلوم</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> يمان قصار</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> أنس أرناؤوط</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> عليا الحسن</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> وليد صهريج</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> محمد العلي</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> بلال حمزة</div>
+            <div class="artist-card"><i class="fa-solid fa-microphone-lines"></i> محمود عبوش</div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works">
+        <div class="section-title">
+            <h3>مختارات من الأعمال الموسيقية</h3>
+            <p>اضغط على أي عمل للاستماع والمشاهدة عبر يوتيوب</p>
+        </div>
+        <div class="works-grid">
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+قلبي" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">قلبي</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+بخاطرك" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">بخاطرك</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+مو+الك" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">مو إلك</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=شعرات+الاندومي+علي+محمود" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">شعرات الإندومي</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+ميلي+ميلي" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">ميلي ميلي</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+كلشي+مات" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">كلشي مات</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+ما+ضل+رجعة" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">ما ضل رجعة</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+لوين" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">لوين</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+عشق+يكبر" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">عشق يكبر</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+وقت+الشدة" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">وقت الشدة</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+عم+اسألك+يا+ليل" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">عم اسألك يا ليل</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+ملاكي" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">ملاكي</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+وعدتك" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">وعدتك</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+ما+في+بحلاكي" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">ما في بحلاكي</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+مجنون+ليلى" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">مجنون ليلى</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+غالي+عليي" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">غالي عليي</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=محتاجة+روحي+ببابك+نوقف+علي+محمود" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">محتاجة روحي ببابك نوقف</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+للموت+احبك" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">للموت أحبك</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+
+            <a href="https://www.youtube.com/results?search_query=علي+محمود+ميت+عشق" target="_blank" class="work-card">
+                <div class="work-info">
+                    <div class="music-icon"><i class="fa-solid fa-play"></i></div>
+                    <div>
+                        <div class="work-title">ميت عشق</div>
+                        <div class="work-sub">علي محمود</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left play-arrow"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-title" style="margin-bottom: 15px;">
+            <h3>تواصل معي</h3>
+            <p>للاستفسارات الفنية، الألحان، التوزيع الموسيقي، والهندسة الصوتية</p>
+        </div>
+        <div class="contact-links">
+            <a href="https://youtube.com/@alimahmood.?si=vJq6zbE7PpBryXlS" target="_blank" class="btn btn-gold">
+                <i class="fa-brands fa-youtube"></i> يوتيوب الرسمي
+            </a>
+            <a href="https://www.instagram.com/alimahmood.music__?mdxt=MXY1b2hsamh5YXk3aA==" target="_blank" class="btn btn-outline">
+                <i class="fa-brands fa-instagram"></i> إنستغرام
+            </a>
+            <a href="https://www.facebook.com/share/1CweoJmNap/" target="_blank" class="btn btn-outline">
+                <i class="fa-brands fa-facebook"></i> الصفحة العامة (فيسبوك)
+            </a>
+            <a href="https://www.facebook.com/share/14z5Qkau5P8/" target="_blank" class="btn btn-outline">
+                <i class="fa-solid fa-user-check"></i> حساب التواصل الشخصي
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        جميع الحقوق محفوظة © 2026 - علي محمود | Ali Mahmood
+    </footer>
+
+</body>
+</html>
