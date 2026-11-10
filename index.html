@@ -75,7 +75,7 @@
             color: var(--gold);
         }
 
-        /* Hero Section */
+        /* Hero Section & Profile Image Styling */
         header {
             min-height: 90vh;
             display: flex;
@@ -85,6 +85,16 @@
             text-align: center;
             padding: 120px 20px 60px;
             background: radial-gradient(circle at center, rgba(212, 175, 55, 0.12) 0%, rgba(11, 12, 16, 1) 70%);
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            margin-bottom: 25px;
         }
 
         .badge {
@@ -320,6 +330,7 @@
             header h2 { font-size: 1.1rem; }
             .nav-links { display: none; }
             .about-box { padding: 25px; font-size: 1.05rem; }
+            .profile-img { width: 130px; height: 130px; }
         }
     </style>
 </head>
@@ -338,6 +349,9 @@
 
     <!-- Hero Section -->
     <header>
+        <!-- صورة البورتريه الشخصية -->
+        <img src="A.jpg" alt="علي محمود" class="profile-img">
+        
         <div class="badge"><i class="fa-solid fa-music"></i> منذ عام 2016 • سوريا</div>
         <h1>علي محمود</h1>
         <h2>ملحن وموزع موسيقي ومهندس صوت</h2>
@@ -641,4 +655,4 @@
     </footer>
 
 </body>
-</html>
+    </html>
